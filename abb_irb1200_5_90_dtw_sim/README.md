@@ -35,6 +35,7 @@ roslaunch abb_irb1200_simulation_dtw simulation_dtw_program.launch
 ```
 roslaunch abb_irb1200_simulation_dtw run_and_compare.launch
 ```
+Hallo
 
 7. Possible values for run_mode (default is "square")
 ```
