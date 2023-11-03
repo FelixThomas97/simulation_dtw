@@ -18,7 +18,12 @@ sudo apt install ros-noetic-moveit
 
 3. Install Pandas, NumPy and DTW
 ```
+sudo apt install python3-pip
 pip install pandas dtw-python numpy
+```
+It is possible that numpy needs to be updated first
+```
+pip install --upgrade numpy
 ```
 
 4. Install all the dependencies 
@@ -26,17 +31,36 @@ pip install pandas dtw-python numpy
 rosdep install --from-paths src --ignore-src --rosdistro noetic -y
 ```
 
-5. To start the Robot Simulation in Gazebo and the RViz with Moveit, Run the simulation launch file
+5. Create a new ROS workspace
 ```
-roslaunch abb_irb1200_simulation_dtw simulation_dtw_program.launch
-```
-
-6. Run the run and compare launch file
-```
-roslaunch abb_irb1200_simulation_dtw run_and_compare.launch
+mkdir -p ~/yourfoldersname/src
+cd ~/yourfoldersname/
+catkin_make
 ```
 
-7. Possible values for run_mode (default is "square")
+6. Clone this repository into the src folder
+```
+cd ~/src/
+git clone https://github.com/vmarquim/simulation_dtw.git
+```
+
+7. Go back to the root ot the workspace and source
+```
+cd ..
+source devel/setup.bash
+```
+
+8. To start the Robot Simulation in Gazebo and the RViz with Moveit, Run the simulation launch file
+```
+roslaunch abb_irb1200_5_90_dtw_sim simulation_program.launch
+```
+
+9. Run the run and compare launch file
+```
+roslaunch abb_irb1200_5_90_dtw_sim run_and_compare.launch
+```
+
+10. Possible values for run_mode (default is "square")
 ```
 "square"
 "circle"
