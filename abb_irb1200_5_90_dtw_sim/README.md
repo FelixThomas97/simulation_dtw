@@ -43,3 +43,7 @@ roslaunch abb_irb1200_simulation_dtw run_and_compare.launch
 "line"
 "random-valid"
 ```
+
+# Connection with the real robot
+
+here write
